@@ -1,1 +1,18 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg bg-purple ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" routerLink="/">Rick & Morty API Test</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="bi bi-list icon-btn"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/">Home</a>
+          </li>
+        </ul>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <app-form-search></app-form-search>
+        </div>
+      </div>
+    </div>
+  </nav>
