@@ -12,7 +12,7 @@ const myComponents = [CharacterListComponent,CharacterDetailsComponent];
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     ...myComponents

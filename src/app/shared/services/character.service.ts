@@ -11,10 +11,10 @@ export class CharacterService {
   constructor(private http: HttpClient) { }
 
   searchCharacter(query = '', page = 1) {
-    const filter = `${environment.apiUrl}?name=${query}&page=${page}`;
+    const filter = `${environment.apiUrl}/?name=${query}&page=${page}`;
     return this.http.get<Character[]>(filter);
   }
-  getDetailCharacter(id: number) {
-    return this.http.get<Character>(`${environment.apiUrl}${id}`);
+  getDetails(id: number) {
+    return this.http.get<Character>(`${environment.apiUrl}/${id}`);
   }
 }
