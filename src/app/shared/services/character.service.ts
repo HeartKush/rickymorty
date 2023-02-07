@@ -17,4 +17,7 @@ export class CharacterService {
   getDetails(id: number) {
     return this.http.get<Character>(`${environment.apiUrl}/${id}`);
   }
+  getMultipleCharacters(query: string){
+    return this.http.get<Character[]>(`${environment.apiUrl}/${query}`);
+  }
 }

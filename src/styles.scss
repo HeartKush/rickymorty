@@ -1,56 +1,82 @@
-body{
-    background-color: #dddddd;
+body {
+  background-color: #dddddd;
 }
-.container{
-    margin-top: 4rem;
+.container {
+  margin-top: 4rem;
 }
-.bg-purple{
-    background-color: #03001C;
+.btn-up {
+  position: fixed;
+  top: 90%;
+  left: 5%;
 }
-.navbar{
-    border-radius: 0px 0px 50px 50px;;
+.bg-purple {
+  background-color: #03001c;
 }
-.container-fluid{
-    width: 90%;
+.navbar {
+  border-radius: 0px 0px 50px 50px;
 }
-.icon-btn{
-    color: #4dafff;
-    font-size: 30px;
+.container-fluid {
+  width: 90%;
 }
-.btn-primary{
+.icon-btn {
+  color: #4dafff;
+  font-size: 30px;
+}
+.btn-primary {
+  border-radius: 50px;
+  min-width: 100px;
+  background-color: #4dafff;
+  color: white;
+  border-color: white;
+  transition: all 0.2 ease-in-out;
+  &:hover {
+    background-color: #301e67;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+  }
+}
+.btn-number {
     border-radius: 50px;
-    min-width: 100px;
+    min-width: 60px;
     background-color: #4dafff;
     color: white;
     border-color: white;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 8%;
     transition: all 0.2 ease-in-out;
-    &:hover{
-        background-color: #301E67;
-        color: white;
-        border-color: white;
-        cursor: pointer;
+    &:hover {
+      background-color: #301e67;
+      color: white;
+      border-color: white;
+      cursor: pointer;
     }
-}
-.card{
-    box-shadow: 0 1px 3px rgba(0, 0 , 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    box-sizing: border-box;
-    margin: 10px 0;
-    background-color: #fff;
-    max-width: 529px;
-    transition: all 0.2 ease-in-out;
-    &:hover{
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.24);
-        cursor: pointer;
+  }
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  margin: 10px 0;
+  background-color: #fff;
+  max-width: 529px;
+  transition: all 0.2 ease-in-out;
+  border-radius: 50px 50px 30px 30px;
+ 
+  &:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+  }
+  img {
+    opacity: 0cm;
+    width: 100%;
+    height: 250px;
+    transition: opacity 0.7;
+    border-radius: 50px 50px 50px 50px;
+    &:hover {
+      opacity: 1;
     }
-    img{
-        opacity: 0cm;
-        width: 100%;
-        transition: opacity 0.7;
-        &:hover{
-            opacity: 1;
-        }
-    }
-    .card-inner{
-        padding: 10px;
-    }
+  }
+  .card-inner {
+    padding: 10px;
+  }
 }

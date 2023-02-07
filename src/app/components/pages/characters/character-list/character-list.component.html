@@ -1,32 +1,28 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let character of characters">
-    <div class="card">
-      <div class="image">
-        <a [routerLink]="['/character-details', character.id]">
-          <img
-            class="card-img-top"
-            [src]="character.image"
-            [alt]="character.name"
-          />
-        </a>
-      </div>
-      <div class="card-inner">
-        <div class="header">
-          <a [routerLink]="['/character-details', character.id]">
-            <h2 class="card-title">{{ character.name | slice : 0 : 15 }}</h2>
-          </a>
-          <h4 class="text-muted">{{ character.gender }}</h4>
-          <small class="text-muted">{{ character.created | date }}</small>
-        </div>
-      </div>
-    </div>
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let character of characters">
+      <app-character [character]="character"></app-character>
   </div>
   <div
-    class="col-xs-12 col-sm-6 com-md-4 mt-5 container-notFound"
+    class="col-xs-12 col-sm-6 col-md-4 mt-5 container-notFound"
     *ngIf="characters.length <= 0"
   >
     <p>No results....</p>
   </div>
 </div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" (click)="loadPreviousPage()">
+      <a class="page-link"aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li *ngFor="let page of focusPages" class="page-item" (click)="loadPage(page)"><a class="page-link">{{page}}</a></li>
+    <li class="page-item"  (click)="loadNextPage()">
+      <a class="page-link"  aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 
-<button class="btn btn-primary">Go up</button>
+<button class="btn btn-primary btn-up" (click)="onGoUp()">Go up</button>
