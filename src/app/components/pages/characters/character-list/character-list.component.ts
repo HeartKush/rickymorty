@@ -44,7 +44,7 @@ export class CharacterListComponent implements OnInit {
         }
       });
     this.loadPage(1);
-    // this.getCharactersByQuery();
+    this.getCharactersByQuery();
   }
 
   private getDataFromService(): void {
@@ -58,6 +58,7 @@ export class CharacterListComponent implements OnInit {
           const { info, results } = res;
           this.info = info;
           this.totalEntries = info.count;
+          this.characters = [...results]
         } else {
           this.characters = [];
         }
